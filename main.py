@@ -24,6 +24,7 @@ def make_single_list():
 if __name__ == '__main__':
     word_list = make_single_list()
     for i in range(5):
-        print(i)
         common = sort_by_common_found(word_list, i)
-        print(get_max_common(common))
+        worst_found, worst_list = (get_max_common(common))
+        worst_found = worst_found[:i] + "_" + worst_found[i:]
+        print(worst_found, worst_list)
